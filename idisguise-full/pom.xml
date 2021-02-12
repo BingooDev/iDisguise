@@ -25,6 +25,12 @@
   	</dependency>
   	<dependency>
   		<groupId>de.robingrether.idisguise</groupId>
+  		<artifactId>idisguise-impl-v1_14_R4</artifactId>
+  		<version>5.8.2</version>
+  		<scope>compile</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>de.robingrether.idisguise</groupId>
   		<artifactId>idisguise-impl-v1_13_R2</artifactId>
   		<version>5.8.2</version>
   		<scope>compile</scope>

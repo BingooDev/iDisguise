@@ -12,8 +12,8 @@ import de.robingrether.idisguise.management.util.EntityIdList;
 
 public class VersionHelper {
 	
-	public static final String v1_8 = "v1_8_R3", v1_9 = "v1_9_R2", v1_10 = "v1_10_R1", v1_11 = "v1_11_R1", v1_12 = "v1_12_R1", v1_13 = "v1_13_R2";
-	public static final List<String> VERSIONS = Arrays.asList(v1_8, v1_9, v1_10, v1_11, v1_12, v1_13);
+	public static final String v1_8 = "v1_8_R3", v1_9 = "v1_9_R2", v1_10 = "v1_10_R1", v1_11 = "v1_11_R1", v1_12 = "v1_12_R1", v1_13 = "v1_13_R2", v1_14 = "v1_14_R1";
+	public static final List<String> VERSIONS = Arrays.asList(v1_8, v1_9, v1_10, v1_11, v1_12, v1_13, v1_14);
 	public static final String EARLIEST = VERSIONS.get(0);
 	
 	private static boolean initialized = false;
@@ -76,6 +76,7 @@ public class VersionHelper {
 		}
 		try {
 			versionCode = Bukkit.getServer().getClass().getPackage().getName().substring(orgBukkitCraftbukkit.length() + 1);
+			System.err.println(versionCode);
 			if(!VERSIONS.contains(versionCode)) return false;
 			
 			orgBukkitCraftbukkitVersioned = orgBukkitCraftbukkit + "." + versionCode;
