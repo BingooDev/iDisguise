@@ -119,7 +119,11 @@ public class ProfileHelperUID extends ProfileHelper {
 				connection.connect();
 				if(connection.getResponseCode() == 200) {
 					reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-					String response = reader.readLine();
+					String response = "";
+					int i;
+					while((i=reader.read())!=-1){  
+						response += (char)i;  
+					}
 					JSONObject object = (JSONObject)JSONValue.parse(response);
 					name = (String)object.get(API_UID_NAME);
 					profile = new GameProfile(uniqueId, name);
