@@ -68,9 +68,6 @@ EntityLiving_getEffects->MEntityLiving$getEffects()
 
 EntityMinecartAbstract->C{nms}.EntityMinecartAbstract
 
-EntityOcelot->C{nms}.EntityOcelot
-EntityOcelot_setCatType->MEntityOcelot$setCatType(int)
-
 EntityPig->C{nms}.EntityPig
 EntityPig_setSaddle->MEntityPig$setSaddle(boolean)
 

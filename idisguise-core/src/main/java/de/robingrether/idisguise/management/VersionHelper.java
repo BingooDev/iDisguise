@@ -18,7 +18,7 @@ public class VersionHelper {
 	
 	private static boolean initialized = false;
 	private static String versionCode, orgBukkitCraftbukkit = "org.bukkit.craftbukkit", netMinecraftServer = "net.minecraft.server", orgBukkitCraftbukkitVersioned, netMinecraftServerVersioned;
-	private static boolean debug, require1_9, require1_10, require1_11, require1_12, require1_13;
+	private static boolean debug, require1_9, require1_10, require1_11, require1_12, require1_13, require1_14;
 	
 	public static String getVersionCode() {
 		return versionCode;
@@ -48,6 +48,10 @@ public class VersionHelper {
 			}
 		}
 		return false;
+	}
+	
+	public static boolean require1_14() {
+		return require1_14;
 	}
 	
 	public static boolean require1_13() {
@@ -88,6 +92,7 @@ public class VersionHelper {
 			require1_11 = requireVersion(v1_11);
 			require1_12 = requireVersion(v1_12);
 			require1_13 = requireVersion(v1_13);
+			require1_14 = requireVersion(v1_14);
 			
 			Reflection.load("reflection/common.txt", netMinecraftServerVersioned, orgBukkitCraftbukkitVersioned);
 			Reflection.load("reflection/" + versionCode + ".txt", netMinecraftServerVersioned, orgBukkitCraftbukkitVersioned);
@@ -98,7 +103,7 @@ public class VersionHelper {
 			Reflection.EntityHumanNonAbstract = Class.forName("de.robingrether.idisguise.management.reflection.EntityHumanNonAbstract" + versionCode.replaceAll("[^0-9]*", ""));
 			Reflection.EntityHumanNonAbstract_new = Reflection.EntityHumanNonAbstract.getConstructor(Reflection.World, Reflection.GameProfile);
 			
-			if(require1_13) Sounds.init("sounds/113.yml");
+			if(require1_14) Sounds.init("sounds/113.yml");
 			else if(require1_9) Sounds.init("sounds/112.yml");
 			else Sounds.init("sounds/18.yml");
 			

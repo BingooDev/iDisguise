@@ -121,3 +121,6 @@ PacketPlayOutRelEntityMove->C{nms}.PacketPlayOutEntity$PacketPlayOutRelEntityMov
 PacketPlayOutRelEntityMoveLook->C{nms}.PacketPlayOutEntity$PacketPlayOutRelEntityMoveLook
 
 NetworkManager_channel->FNetworkManager$channel
+
+EntityOcelot->C{nms}.EntityOcelot
+EntityOcelot_setCatType->MEntityOcelot$setCatType(int)
